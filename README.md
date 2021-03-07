@@ -18,6 +18,9 @@ root@eBPF:~/shared_mem_demo#
 root@eBPF:~/shared_mem_demo#
 root@eBPF:~/shared_mem_demo# insmod kernel_module.ko
 root@eBPF:~/shared_mem_demo#
+root@eBPF:~/shared_mem_demo# cat /proc/devices  | grep evt_map
+243 evt_map
+root@eBPF:~/shared_mem_demo#
 root@eBPF:~/shared_mem_demo# mknod /dev/evt_map c 243 0
 root@eBPF:~/shared_mem_demo#
 root@eBPF:~/shared_mem_demo# gcc userspace.c -o userspace
